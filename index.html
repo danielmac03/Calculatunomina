@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcula tu nómina</title>
+        <meta charset="utf-8">
+        <meta name="title" content="Calcula tu nómina">
+        <meta name="description" content="Calcular tu nómina online">
+        <meta name="robots" content="index, follow, all">
+        <meta http-equiv="Content-Language" content="es">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Custom CSS on Bootstrap -->
+        <link rel="stylesheet" href="resources/custom.css">
+        
+        <!-- Boostrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="container">
+        
+        <a href="index.html"><h1>Calcula tu nómina</h1></a>
+        
+        <div class="jumbotron">
+            <p>
+                Calculatunomina.es le permite calcular su nómina y no almacenaremos ninguna información. <br>
+                Calculatunomina.es está diseñado para España, ja que para el cálculo, los porcentajes no son los mismos para todos los países.
+            </p>
+        </div>
+
+        <form action="result.html" method="GET">
+
+            <div class="row">
+
+                <div class="col-md-6">
+            
+                    <div class="form-group">
+                        <label for="fsalario_base">Salario Base (Bruto):</label>
+                        <input type="number" name="fsalario_base" class="form-control" placeholder="1500" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fantiguedad">Antiguedad:</label>
+                        <input type="number" name="fantiguedad" class="form-control" placeholder="375" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ffm">Fueza Mayor:</label>
+                        <input type="number" name="ffm" class="form-control" placeholder="125" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="festructurales_no">Total de estructurales o no estructurales:</label>
+                        <input type="number" name="festructurales_no" class="form-control" placeholder="333" min="0" required>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="fextras">Total de extras:</label>
+                        <input type="number" name="fextras" class="form-control" placeholder="157" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firpf">IRPF:</label>
+                        <input type="percent" name="firpf" class="form-control" placeholder="19,25" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fpagas">Pagas extraordinarias:</label><br>
+                        <input type="number" name="fpagas" min="0" value="0" class="form-control pagas" min="0" required>
+                    
+                        <input type="checkbox" name="csalario_base" value="1" class="pagas">
+                        <label for="csalario_base">Salario Base |</label>
+
+                        <input type="checkbox" name="cantiguedad" value="1">
+                        <label for="cantiguedad">Antiguedad |</label>
+
+                        <input type="checkbox" name="cextras" value="1">
+                        <label for="cextras">Extras |</label>
+
+                        <input type="checkbox" name="chextras" value="1">
+                        <label for="chextras">Horas extraordinarias</label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="fcontrato">Tipo de contrato:</label>
+
+                        <input type="radio" name="fcontrato" value="indefinido" required>
+                        <label>Indefinido</label>
+
+                        <input type="radio" name="fcontrato" value="temporal">
+                        <label>Temporal</label>
+                    </div>
+                </div>
+
+            </div>
+                
+            <input type="submit" value="Generar" class="form-control btn btn-primary">
+
+        </form><br>
+
+        <footer class="footer text-left list-unstyled">
+            <ul class="list-unstyled">
+                <li class="nav-item">
+                    <a href="https://github.com/danielmac03/calculatunomina" target="_blank">Github</a>
+                </li>
+            </ul>
+        </footer>
+
+    </body>
+</html>
