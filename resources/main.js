@@ -81,22 +81,29 @@ var paro = bccp/100 * contrato;
 
 var fp = bccp/100 * 0.1;
 
-fm = fm/100 * 2;
+var fm2 = fm/100 * 2;
 
-estructurales_no = estructurales_no/100 * 4.7;
+var estructurales_no2 = estructurales_no/100 * 4.7;
 
 irpf = meritado/100 * irpf;
 
-var deduido = cc + paro + fp + fm + estructurales_no + irpf;
+var deduido = cc + paro + fp + fm2 + estructurales_no2 + irpf;
 
 var recibir = meritado - deduido;
 
 //Obtener los tags html i añadir los valores respectivos
-document.getElementById("cc").innerHTML += cc.toFixed(2);
-document.getElementById("paro").innerHTML += paro.toFixed(2);
-document.getElementById("fp").innerHTML += fp.toFixed(2);
-document.getElementById("fm").innerHTML += fm.toFixed(2);
-document.getElementById("estructurales_no").innerHTML += estructurales_no.toFixed(2);
-document.getElementById("irpf").innerHTML += irpf.toFixed(2);
-document.getElementById("deduido").innerHTML += deduido.toFixed(2);
-document.getElementById("recibir").innerHTML += recibir.toFixed(2);
+document.getElementById("cc").innerHTML += cc.toFixed(2) + '€';
+document.getElementById("paro").innerHTML += paro.toFixed(2) + '€';
+document.getElementById("fp").innerHTML += fp.toFixed(2) + '€';
+document.getElementById("fm2").innerHTML += fm2.toFixed(2) + '€';
+document.getElementById("estructurales_no2").innerHTML += estructurales_no2.toFixed(2) + '€';
+document.getElementById("irpf").innerHTML += irpf.toFixed(2) + '€';
+
+document.getElementById("salario_base").innerHTML += salario_base.toFixed(2) + '€';
+document.getElementById("antiguedad").innerHTML += antiguedad.toFixed(2) + '€';
+document.getElementById("fm").innerHTML += fm.toFixed(2) + '€';
+document.getElementById("estructurales_no").innerHTML += estructurales_no.toFixed(2) + '€';
+document.getElementById("extras").innerHTML += extras.toFixed(2) + '€';
+
+document.getElementById("deduido").innerHTML += '<b>' + deduido.toFixed(2) + '€' + '</b>';
+document.getElementById("recibir").innerHTML += '<b>' + recibir.toFixed(2) + '€' + '</b>';

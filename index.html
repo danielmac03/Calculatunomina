@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Calcula tu nómina</title>
         <meta charset="utf-8">
@@ -25,8 +25,8 @@
         
         <div class="jumbotron">
             <p>
-                Calculatunomina.es le permite calcular su nómina y no almacenaremos ninguna información. <br>
-                Calculatunomina.es está diseñado para España, ja que para el cálculo, los porcentajes no son los mismos para todos los países.
+                Calcule su nómina de forma fácil y segura ya que no almacenamos ninguna información. <br>
+                Solo funciona para España, ya que en cada país es diferente.
             </p>
         </div>
 
@@ -38,22 +38,22 @@
             
                     <div class="form-group">
                         <label for="fsalario_base">Salario Base (Bruto):</label>
-                        <input type="number" name="fsalario_base" class="form-control" placeholder="1500" min="0" required>
+                        <input type="number" name="fsalario_base" class="form-control" min="0" required>
                     </div>
 
                     <div class="form-group">
                         <label for="fantiguedad">Antiguedad:</label>
-                        <input type="number" name="fantiguedad" class="form-control" placeholder="375" min="0" required>
+                        <input type="number" name="fantiguedad" class="form-control" min="0" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="ffm">Fueza Mayor:</label>
-                        <input type="number" name="ffm" class="form-control" placeholder="125" min="0" required>
+                        <label for="ffm">Fuerza mayor:</label>
+                        <input type="number" name="ffm" class="form-control" min="0" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="festructurales_no">Total de estructurales o no estructurales:</label>
-                        <input type="number" name="festructurales_no" class="form-control" placeholder="333" min="0" required>
+                        <label for="festructurales_no">Estructurales o no estructurales:</label>
+                        <input type="number" name="festructurales_no" class="form-control" min="0" required>
                     </div>
 
                 </div>
@@ -61,18 +61,18 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <label for="fextras">Total de extras:</label>
-                        <input type="number" name="fextras" class="form-control" placeholder="157" min="0" required>
+                        <label for="fextras">Extras:</label>
+                        <input type="number" name="fextras" class="form-control" min="0" required>
                     </div>
 
                     <div class="form-group">
                         <label for="firpf">IRPF:</label>
-                        <input type="percent" name="firpf" class="form-control" placeholder="19,25" min="0" max="100" required>
+                        <input type="percent" name="firpf" class="form-control" min="0" max="100" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="fpagas">Pagas extraordinarias:</label><br>
-                        <input type="number" name="fpagas" min="0" value="0" class="form-control pagas" min="0" required>
+                        <label for="fpagas">Nº pagas extraordinarias:</label><br>
+                        <input type="number" name="fpagas" class="form-control pagas" min="0" required>
                     
                         <input type="checkbox" name="csalario_base" value="1" class="pagas">
                         <label for="csalario_base">Salario Base |</label>
@@ -100,14 +100,14 @@
 
             </div>
                 
-            <input type="submit" value="Generar" class="form-control btn btn-primary">
+            <input type="submit" value="Calcular" class="form-control btn btn-primary">
 
         </form><br>
 
         <footer class="footer text-left list-unstyled">
             <ul class="list-unstyled">
                 <li class="nav-item">
-                    <a href="https://github.com/danielmac03/calculatunomina" target="_blank">Github</a>
+                    <a href="https://github.com/danielmac03/calculatunomina" target="_blank" rel="noopener">Github</a>
                 </li>
             </ul>
         </footer>

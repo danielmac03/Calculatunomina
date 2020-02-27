@@ -5,3 +5,7 @@ h1{
  .jumbotron{
      padding: 2rem 2rem !important;
  }
+
+ body{
+     width: 80% !important;
+ }
