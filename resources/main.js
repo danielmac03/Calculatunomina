@@ -64,6 +64,15 @@ if (contrato == "temporal"){
 }
 contrato = parseFloat(contrato)
 
+//Si los parametros no requerios el valor és Nan lo cambio a 0
+antiguedad = isNaN(antiguedad) ? 0 : antiguedad;
+fm = isNaN(fm) ? 0 : fm;
+fm2 = isNaN(fm2) ? 0 : fm2;
+estructurales_no = isNaN(estructurales_no) ? 0 : estructurales_no;
+estructurales_no2 = isNaN(estructurales_no2) ? 0 : estructurales_no2;
+extras = isNaN(extras) ? 0 : extras;
+pagas = isNaN(pagas) ? 0 : pagas;
+
 //Cálculo de la nómina
 var meritado = salario_base + antiguedad + fm + estructurales_no + extras;
 
@@ -92,18 +101,18 @@ var deduido = cc + paro + fp + fm2 + estructurales_no2 + irpf;
 var recibir = meritado - deduido;
 
 //Obtener los tags html i añadir los valores respectivos
-document.getElementById("cc").innerHTML += cc.toFixed(2) + '€';
-document.getElementById("paro").innerHTML += paro.toFixed(2) + '€';
-document.getElementById("fp").innerHTML += fp.toFixed(2) + '€';
-document.getElementById("fm2").innerHTML += fm2.toFixed(2) + '€';
-document.getElementById("estructurales_no2").innerHTML += estructurales_no2.toFixed(2) + '€';
-document.getElementById("irpf").innerHTML += irpf.toFixed(2) + '€';
+document.getElementById("cc").innerHTML += cc.toFixed(2) + ' €';
+document.getElementById("paro").innerHTML += paro.toFixed(2) + ' €';
+document.getElementById("fp").innerHTML += fp.toFixed(2) + ' €';
+document.getElementById("fm2").innerHTML += fm2.toFixed(2) + ' €';
+document.getElementById("estructurales_no2").innerHTML += estructurales_no2.toFixed(2) + ' €';
+document.getElementById("irpf").innerHTML += irpf.toFixed(2) + ' €';
 
-document.getElementById("salario_base").innerHTML += salario_base.toFixed(2) + '€';
-document.getElementById("antiguedad").innerHTML += antiguedad.toFixed(2) + '€';
-document.getElementById("fm").innerHTML += fm.toFixed(2) + '€';
-document.getElementById("estructurales_no").innerHTML += estructurales_no.toFixed(2) + '€';
-document.getElementById("extras").innerHTML += extras.toFixed(2) + '€';
+document.getElementById("salario_base").innerHTML += salario_base.toFixed(2) + ' €';
+document.getElementById("antiguedad").innerHTML += antiguedad.toFixed(2) + ' €';
+document.getElementById("fm").innerHTML = 'Fuerza mayor: ' + fm.toFixed(2) + ' €';
+document.getElementById("estructurales_no").innerHTML += estructurales_no.toFixed(2) + ' €';
+document.getElementById("extras").innerHTML += extras.toFixed(2) + ' €';
 
-document.getElementById("deduido").innerHTML += '<b>' + deduido.toFixed(2) + '€' + '</b>';
-document.getElementById("recibir").innerHTML += '<b>' + recibir.toFixed(2) + '€' + '</b>';
+document.getElementById("deduido").innerHTML += '<b>' + deduido.toFixed(2) + ' €' + '</b>';
+document.getElementById("recibir").innerHTML += '<b>' + recibir.toFixed(2) + ' €' + '</b>';

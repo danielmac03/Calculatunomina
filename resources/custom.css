@@ -9,3 +9,7 @@ h1{
  body{
      width: 80% !important;
  }
+
+ span{
+     color: red;
+ }

@@ -37,23 +37,23 @@
                 <div class="col-md-6">
             
                     <div class="form-group">
-                        <label for="fsalario_base">Salario Base (Bruto):</label>
-                        <input type="number" name="fsalario_base" class="form-control" min="0" required>
+                        <label for="fsalario_base"><span>*</span> Salario Base (Bruto):</label>
+                        <input type="number" name="fsalario_base" class="form-control" min="0" value="0" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="fantiguedad">Antiguedad:</label>
-                        <input type="number" name="fantiguedad" class="form-control" min="0" required>
+                        <label for="fantiguedad">Antigüedad:</label>
+                        <input type="number" name="fantiguedad" class="form-control" min="0" value="0">
                     </div>
 
                     <div class="form-group">
                         <label for="ffm">Fuerza mayor:</label>
-                        <input type="number" name="ffm" class="form-control" min="0" required>
+                        <input type="number" name="ffm" class="form-control" min="0" value="0">
                     </div>
 
                     <div class="form-group">
                         <label for="festructurales_no">Estructurales o no estructurales:</label>
-                        <input type="number" name="festructurales_no" class="form-control" min="0" required>
+                        <input type="number" name="festructurales_no" class="form-control" min="0" value="0">
                     </div>
 
                 </div>
@@ -62,23 +62,23 @@
 
                     <div class="form-group">
                         <label for="fextras">Extras:</label>
-                        <input type="number" name="fextras" class="form-control" min="0" required>
+                        <input type="number" name="fextras" class="form-control" min="0" value="0">
                     </div>
 
                     <div class="form-group">
-                        <label for="firpf">IRPF:</label>
-                        <input type="percent" name="firpf" class="form-control" min="0" max="100" required>
+                        <label for="firpf"><span>*</span> IRPF:</label>
+                        <input type="percent" name="firpf" class="form-control" min="0" max="100" value="0%" required>
                     </div>
 
                     <div class="form-group">
                         <label for="fpagas">Nº pagas extraordinarias:</label><br>
-                        <input type="number" name="fpagas" class="form-control pagas" min="0" required>
+                        <input type="number" name="fpagas" class="form-control pagas" min="0" value="0">
                     
                         <input type="checkbox" name="csalario_base" value="1" class="pagas">
                         <label for="csalario_base">Salario Base |</label>
 
                         <input type="checkbox" name="cantiguedad" value="1">
-                        <label for="cantiguedad">Antiguedad |</label>
+                        <label for="cantiguedad">Antigüedad |</label>
 
                         <input type="checkbox" name="cextras" value="1">
                         <label for="cextras">Extras |</label>
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="radio">
-                        <label for="fcontrato">Tipo de contrato:</label>
+                        <label for="fcontrato"><span>*</span> Tipo de contrato:</label>
 
                         <input type="radio" name="fcontrato" value="indefinido" required>
                         <label>Indefinido</label>
