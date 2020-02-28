@@ -102,7 +102,65 @@
                 
             <input type="submit" value="Calcular" class="form-control btn btn-primary">
 
-        </form><br>
+        </form><br><hr>
+
+        <div name="informacion">
+
+            <h3>Como se calcula una nomina?</h3><br>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h4>Que se necesita?</h4>
+
+                    <h5>Requisitos:</h5>
+                    <ul>
+                        <li>Salario base</li>
+                        <li>Antigüedad</li>
+                        <li>IRPF</li>
+                        <li>Tipo de contrato:</li>
+                            <ul>
+                                <li>Temporal - 1,60%</li>
+                                <li>Indefinido - 1,55%</li>
+                            </ul>
+                    </ul>
+
+                    <h5>Datos opcionales:</h5>
+                    <ul>
+                        <li>Horas extraordinarias</li>
+                            <ul>
+                                    <li>Fuerza mayor</li>
+                                    <li>Estructurales</li>
+                                    <li>No estruturales</li>
+                            </ul>
+                        <li>Extras (plus)</li>    
+                        <li>Nª de pagas extraordinarias y lo que incluyen</li>  
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                   <h4>Formulas:</h4>
+
+                   <ul class="list-unstyled">
+                       <li class="nav-item"><strong>Meritado:</strong> Salario base + Antigüedad + Horas extraordinarias + Extras</li>
+                       <li class="nav-item"><strong>Prorrata:</strong> (Pagas extraordinarias * nª de las pagas extraordinarias) / 12</li>
+                       <li class="nav-item"><strong>BCCC:</strong> Meritado - Horas extraordinarias + Prorrata</li>
+                       <li class="nav-item"><strong>BCCP:</strong> BCCC + Horas extraordinarias</li>
+                       <li class="nav-item"><strong>CC:</strong> 4,7% de BCCC</li>
+                       <li class="nav-item"><strong>Paro:</strong> Tipo de contrato de BCCP</li>
+                       <li class="nav-item"><strong>FP:</strong> 0,1% de BCCP</li>
+                       <li class="nav-item"><strong>FM:</strong> 2% de Fuerza mayor</li>
+                       <li class="nav-item"><strong>Estructurals:</strong> 4,7% de Horas estructurales</li>
+                       <li class="nav-item"><strong>No estructurales:</strong> 4,7% de Horas no estructurales</li>
+                       <li class="nav-item"><strong>IRPF:</strong> IRPF de Meritado</li>
+                       <li class="nav-item"><strong>Deducciones:</strong> CC + Atur + FP + FM + Estructurales + No estructurales + IRPF</li>
+                       <li class="nav-item"><strong>Total a recibir:</strong> Meritado - Deducciones</li>
+                       
+                   </ul>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer text-left list-unstyled">
             <ul class="list-unstyled">
