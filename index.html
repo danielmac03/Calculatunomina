@@ -32,10 +32,30 @@
 
         <form action="result.html" method="GET">
 
+            <div class="radio">
+                <span>*</span>
+
+                <input type="radio" name="ftipo" value="empresa" required onChange="empresa()">
+                <label>Empresa</label>
+
+                <input type="radio" name="ftipo" value="empleado" onChange="empleado()">
+                <label>Empleado</label>
+            </div>
+            
+            <div class="radio" id="tipo">
+                <label for="fcontrato"><span>*</span> Tipo de contrato:</label>
+
+                <input type="radio" name="fcontrato" value="indefinido" id="ftipo" required>
+                <label>Indefinido</label>
+
+                <input type="radio" name="fcontrato" value="temporal">
+                <label>Temporal</label>
+            </div>
+
             <div class="row">
 
                 <div class="col-md-6">
-            
+           
                     <div class="form-group">
                         <label for="fsalario_base"><span>*</span> Salario Base (Bruto):</label>
                         <input type="number" name="fsalario_base" class="form-control" min="0" value="0" required>
@@ -65,9 +85,14 @@
                         <input type="number" name="fextras" class="form-control" min="0" value="0">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="beneficios">
                         <label for="firpf"><span>*</span> IRPF:</label>
-                        <input type="percent" name="firpf" class="form-control" min="0" max="100" value="0%" required>
+                        <input type="percent" name="firpf" class="form-control"  id="fbeneficios" min="0" max="100" value="0%" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fbeneficios">Paga de beneficios:</label>
+                        <input type="percent" name="fbeneficios" class="form-control" min="0" max="100" value="0">
                     </div>
 
                     <div class="form-group">
@@ -87,25 +112,16 @@
                         <label for="chextras">Horas extraordinarias</label>
                     </div>
 
-                    <div class="radio">
-                        <label for="fcontrato"><span>*</span> Tipo de contrato:</label>
-
-                        <input type="radio" name="fcontrato" value="indefinido" required>
-                        <label>Indefinido</label>
-
-                        <input type="radio" name="fcontrato" value="temporal">
-                        <label>Temporal</label>
-                    </div>
                 </div>
 
             </div>
-                
+               
             <input type="submit" value="Calcular" class="form-control btn btn-primary">
 
         </form><hr>
 
         
-        <button type="button" class="btn btn-info float-right" data-toggle="collapse" data-target="#informacion">Más información</button>
+        <button type="button" class="btn btn-info float-right" data-toggle="collapse" data-target="#informacion">Más información</button><br>
         <div id="informacion" class="collapse">
             <br>
             <h3>Como se calcula una nomina?</h3><br>
@@ -163,6 +179,9 @@
                 </div>
             </div>
         </div>
+
+        <!--Script-->
+        <script src="resources/index.js"></script>
 
         <footer class="footer text-left list-unstyled">
             <ul class="list-unstyled">
